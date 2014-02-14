@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"> 
+
+<h:head>
+<title>MonitorNFe</title>
+<meta http-equiv="refresh" content="30"/>
+<h:outputStylesheet library="css" name="sistema.css" />
+</h:head> 
+<body> 
+<h1>Monitor de Status do Serviço de Nota Fiscal Eletronica</h1>
+<div class="css_tabela" >
+                <table >
+                    <tr>
+                        <td>
+                            Estado
+                        </td>
+                        <td >
+                           Status
+                        </td>                       
+                    </tr>
+                    <tr>
+                        <td >
+                            Paraná
+                        </td>
+                        <td>
+                            <h:graphicImage library="images" name="green.png" title="Serviço em Operação" style="#{monitorMB.habilitaImagemVerde}"/>
+                            <h:graphicImage library="images" name="red.png" title="Serviço Paralisado sem Previsão"  style="#{monitorMB.habilitaImagemVermelho}"/>
+                            <h:graphicImage library="images" name="yellow.png" title="Serviço Paralisado Momentaneamente"  style="#{monitorMB.habilitaImagemAmarelo}"/>
+                        </td>                        
+                    </tr>                   
+                </table>                
+                <h:graphicImage library="images" name="green.png" title="Serviço em Operação"/>
+                <h:outputLabel value="Serviço em Operação" /><br/>                
+                <h:graphicImage library="images" name="yellow.png" title="Serviço Paralisado Momentaneamente"/>
+                <h:outputLabel value="Serviço Paralisado Momentaneamente" /><br/>                
+                <h:graphicImage library="images" name="red.png" title="Serviço Paralisado sem Previsão" />
+                <h:outputLabel value="Serviço Paralisado sem Previsão" />
+            </div> 
+            <h:outputLabel value="Verificação do status na Sefaz a cada 30 segundos." />           
+</body> 
+</html>
